@@ -40,7 +40,7 @@
         Word verrast door vriendelijk en behulpzaam personeel die allemaal over de Nederlandse taal beschikken en geniet van de comfort van onze Cortina City Bikes, aanbevolenn door de ANWB! <br>
     </p1>
         <img class="verhuurfoto" src="../IMG/fietsverhuur.png" alt="fietsverhuur">
-    <button type="button">Reserveer hier</button>
+    <button type="button"><a href="../../BackEND/form.php">Reserveer hier</a></button>
     </div>
     
     <div class="fietstour">
@@ -55,7 +55,7 @@
         Met deze Barcelona fiets-tour, die inzoomt op de niet te missen hoogtepunten. Deze hoogtepunten ga je zien tijdens de nr. 1 Barcelona fiets-tour.
     </p2>
         <img class="tourfoto" src="../IMG/fietstour.png" alt="fietstour">
-    <button type="button">Reserveer hier</button>
+    <button type="button"><a href="../../BackEND/form.php">Reserveer hier</a></button>
     </div>
         </div>
 
