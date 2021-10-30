@@ -17,10 +17,10 @@
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
-                    <a href="....">Home</a>
-                    <a href="....">Reserveren</a>
-                    <a href="....">Informatie</a>
-                    <a href="....">Prijzen</a>
+                    <a href="../Homepage/homepage.php">Home</a>
+                    <a href="../../BackEND/form.php">Reserveren</a>
+                    <a href="informatiepagina.php">Informatie</a>
+                    <a href="../TarievenPagina/tarievenpagina.php">Prijzen</a>
                 </div>
             </div>
         </div>
