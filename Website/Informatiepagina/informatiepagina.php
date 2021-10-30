@@ -30,7 +30,7 @@
     <br>
     <div class="fietsverhuur">
     <div class="reserveren">
-    <h1>Reserveer een fiets online of in de winkel!</h1><br>
+    <h2>Reserveer een fiets online of in de winkel!</h2>
     <p1>
         Informatie fietsverhuur:<br>
         De fietsen kunnen gereserveerd worden in tijdslots van 4 uur, zo heb jij alle vrijheid om zelf de stad te ontdekken!<br>
@@ -44,7 +44,7 @@
     </div>
     
     <div class="fietstour">
-    <h2>Reserveer de Fiets-tour online of in de winkel!</h2><br>
+    <h2>Reserveer de Fiets-tour online of in de winkel!</h2>
     <p2>
         Informatie fiets-tour:<br>
         De fiets-tour duurt 2,5 uur lang en word 2 keer per dag gehouden: <br>
@@ -100,9 +100,6 @@
             @41.3865754,2.1679125,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4a2f38c88911d:0xf4c4ae83f9d207
             db!2m2!1d2.1685425!2d41.3865368" target=_blank><input type="image" src="../IMG/route.png" id="route" name="route" alt="route"></a>
         </div>
-    </div>
-
-
     </div>
 </body>
 </html>
