@@ -29,8 +29,8 @@ $options = [
 
         if (is_null($error)) {
             try {
-                $stmt = $pdo->prepare("INSERT INTO `reserveringennorm` (`Voornaam`, `Achternaam`, `fietsen`, `datum`) VALUES (?, ?, ?, ?)");
-                $stmt->execute([$_POST['Voornaam'], $_POST['Achternaam'], $_POST['fietsen'], $_POST['datum']]);
+                $stmt = $pdo->prepare("INSERT INTO `reserveringennorm` (`Voornaam`, `Achternaam`, `fietsen`, `datum`, `email`) VALUES (?, ?, ?, ?, ?)");
+                $stmt->execute([$_POST['Voornaam'], $_POST['Achternaam'], $_POST['fietsen'], $_POST['datum'], $_POST['email']]);
             } catch (Exception $ex) { $error = $ex->getMessage(); }
         }
 

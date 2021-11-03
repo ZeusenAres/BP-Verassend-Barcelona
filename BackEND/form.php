@@ -15,6 +15,8 @@
       <input type="number" id="quantity" name="fietsen" min="1" max="20">
       <label for="date">Datum en tijd:</label>
       <input type="datetime-local" id="date" name="datum">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
   
       <input type="submit" value="Verzenden"/>
     </form>
