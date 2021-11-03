@@ -7,34 +7,28 @@ $pass = "";
 $charset = "utf8mb4";
 $dsn = "mysql:host=$dbhost;dbname=$dbname;charset=$charset";
 $options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false
+    ];
 
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        
-            PDO::ATTR_EMULATE_PREPARES   => false
-        
-        ];
-
-        try {
-            $conn = new PDO($dsn, $user, $pass, $options);
-            } catch(PDOException $e) {
-                throw new \PDOException($e->getMessage(), (int)$e->getCode());
-            }
-            $error = null;
-            try {
-                $pdo = new PDO($dsn, $user, $pass, $options);
-            } catch (Exception $ex) {$error = $ex->getMessage();}
+try {
+    $conn = new PDO($dsn, $user, $pass, $options);
+} catch(PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+$error = null;
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (Exception $ex) {$error = $ex->getMessage();}
 
 
-        if (is_null($error)) {
-            try {
-                $stmt = $pdo->prepare("INSERT INTO `reserveringennorm` (`Voornaam`, `Achternaam`, `fietsen`, `datum`) VALUES (?, ?, ?, ?)");
-                $stmt->execute([$_POST['Voornaam'], $_POST['Achternaam'], $_POST['fietsen'], $_POST['datum']]);
-            } catch (Exception $ex) { $error = $ex->getMessage(); }
-        }
+if (is_null($error)) {
+    try {
+        $stmt = $pdo->prepare("INSERT INTO `reserveringennorm` (`Voornaam`, `Achternaam`, `fietsen`, `datum`) VALUES (?, ?, ?, ?)");
+        $stmt->execute([$_POST['Voornaam'], $_POST['Achternaam'], $_POST['fietsen'], $_POST['datum']]);
+    } catch (Exception $ex) { $error = $ex->getMessage(); }
+}
 
 echo is_null($error) ? "Bedankt voor de reservering" : $error;
-
-
 ?>
