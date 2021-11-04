@@ -15,20 +15,31 @@
     <?php
     $layout->getNavbarHead("../Website/Homepage/", "", "../Website/Informatiepagina/", "../Website/Tarievenpagina/", "../Website/InlogPagina/");
     ?>
-    <form  method="POST">
-      <label for="name">Voornaam</label>
-      <input type="text" name="Voornaam" required/>
-      <label for="name">Achternaam</label>
-      <input type="text" name="Achternaam" required/>
-      <label for="quantity">Aantal fietsen</label>
-      <input type="number" id="quantity" name="fietsen" min="1" max="20">
-      <label for="date">Datum en tijd:</label>
-      <input type="datetime-local" id="date" name="datum">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-      <input type="submit" value="Verzenden"/>
-    </form>
-
+      <div class="form-container">
+          <form method="POST">
+              <div>
+                  <label for="name">Voornaam</label>
+                  <input type="text" name="Voornaam" required="required"/>
+              </div>
+              <div>
+                  <label for="name">Achternaam</label>
+                  <input type="text" name="Achternaam" required="required"/>
+              </div>
+              <div>
+                  <label for="quantity">Aantal fietsen</label>
+                  <input type="number" id="quantity" name="fietsen" min="1" max="20" required="required" />
+              </div>
+              <div>
+                  <label for="date">Datum en tijd:</label>
+                  <input type="datetime-local" id="date" name="datum" required="required" />
+              </div>
+              <div>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required="required" />
+              </div>
+              <input type="submit" value="Verzenden"/>
+          </form>
+      </div>
     <?php
     $layout->getNavbarFoot("../Website/IMG/route.png");
     if (isset($_POST['Voornaam'])) {
