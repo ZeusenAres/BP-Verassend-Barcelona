@@ -32,3 +32,4 @@ try {
 
 echo is_null($error) ? "Bedankt voor de reservering,<br> U krijgt zo spoedig mogelijk een bevestiging via de mail.<br>" : $error;
 ?>
+

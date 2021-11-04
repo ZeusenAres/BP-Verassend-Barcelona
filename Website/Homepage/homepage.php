@@ -21,11 +21,13 @@
         <div class="containerA">
             <h1 class="containertitle">Fiets-tours</h1>
             <img src="../IMG/fietstour.png"/>
+            <a href="../../BackEND/formTour.php">Klik hier voor uw reservatie</a>
         </div>
 
         <div class="containerB" id="left">
             <h1 class="containertitle">Fiets-verhuur</h1>
             <img src="../IMG/fietshuur.png"/>
+            <a href="../../BackEND/form.php">Klik hier voor uw reservatie</a>
         </div>
     </div>
     <?php

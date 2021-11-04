@@ -14,25 +14,10 @@
   <body>
     <?php
     $layout->getNavbarHead("../Website/Homepage/", "", "../Website/Informatiepagina/", "../Website/Tarievenpagina/", "../Website/InlogPagina/");
-    ?>
-    <form  method="POST">
-      <label for="name">Voornaam</label>
-      <input type="text" name="Voornaam" required/>
-      <label for="name">Achternaam</label>
-      <input type="text" name="Achternaam" required/>
-      <label for="quantity">Aantal fietsen</label>
-      <input type="number" id="quantity" name="fietsen" min="1" max="10">
-      <label for="date">Datum :</label>
-      <input type="date" id="date" name="datum" min="2021-11-5">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-      <input type="submit" value="Verzenden"/>
-    </form>
-
-    <?php
+    $layout->form("Reserveer uw fietstour hier!");
     $layout->getNavbarFoot("../Website/IMG/route.png");
     if (isset($_POST['Voornaam'])) {
-      require "save.php";
+      require "saveTour.php";
     }
     ?>
   </body>

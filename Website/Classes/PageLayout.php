@@ -68,5 +68,25 @@ class PageLayout
         </nav>
         ";
     }
+
+    public function form(string $formType)
+    {
+        echo '<div class="formcontainer">
+          <form method="POST">
+              ' . "<h1 class='titleform'>$formType</h1>" . '
+              <label for="name"><b>Voornaam:</b></label>
+              <input type="text" name="Voornaam" required="required"/>
+              <label for="name"><b>Achternaam:</b></label>
+              <input type="text" name="Achternaam" required="required"/>
+              <label for="quantity"><b>Aantal fietsen:</b></label>
+              <input type="number" id="quantity" name="fietsen" min="1" max="20"required="required"/>
+              <label for="date"><b>Datum :</b></label>
+              <input type="date" id="date" name="datum" min="2021-11-5"required="required"/>
+              <label for="email"><b>Email:</b></label>
+              <input type="email" id="email" name="email"required="required"/>
+              <input class="submit" type="submit" value="Verzenden"/>
+          </form>
+      </div>';
+    }
 }
 ?>
