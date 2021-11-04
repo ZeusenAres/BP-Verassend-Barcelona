@@ -71,7 +71,7 @@
     </div>
 
     <?php
-    $layout->getNavbarFoot();
+    $layout->getNavbarFoot("../IMG/route.png");
     ?>
 </body>
 

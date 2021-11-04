@@ -14,7 +14,7 @@
 <body>
 
     <?php
-    $layout->getNavbarHead("", "../../BackEnd/", "../Informatiepaging/", "../Tarievenpagina/", "../InlogPagina/");
+    $layout->getNavbarHead("", "../../BackEnd/", "../Informatiepagina/", "../Tarievenpagina/", "../InlogPagina/");
     ?>
 
     <div class="startcontainer">
@@ -29,7 +29,7 @@
         </div>
     </div>
     <?php
-    $layout->getNavbarFoot();
+    $layout->getNavbarFoot("../IMG/route.png");
     ?>
 </body>
 </html>

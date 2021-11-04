@@ -13,7 +13,7 @@
   </head>
   <body>
     <?php
-    $layout->getNavbarHead("../Website/Homepage/", "", "../Website/Informatiepaging/", "../Website/Tarievenpagina/", "../Website/InlogPagina/");
+    $layout->getNavbarHead("../Website/Homepage/", "", "../Website/Informatiepagina/", "../Website/Tarievenpagina/", "../Website/InlogPagina/");
     ?>
     <form  method="POST">
       <label for="name">Voornaam</label>
@@ -30,7 +30,7 @@
     </form>
 
     <?php
-    $layout->getNavbarFoot();
+    $layout->getNavbarFoot("../Website/IMG/route.png");
     if (isset($_POST['Voornaam'])) {
       require "save.php";
     }

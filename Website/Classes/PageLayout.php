@@ -27,7 +27,7 @@ class PageLayout
             ";
     }
 
-    public function getNavbarFoot()
+    public function getNavbarFoot(string $mapPath)
     {
         echo "
         <nav class='footercapsule'>
@@ -63,7 +63,7 @@ class PageLayout
             <div class='route'>
                 <a href='https://www.google.nl/maps/dir//Carrer+de+Bergara,+69,+08002+Barcelona,+Spanje/
                 @41.3865754,2.1679125,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x12a4a2f38c88911d:0xf4c4ae83f9d207
-                db!2m2!1d2.1685425!2d41.3865368' target=_blank><input type='image' src='../IMG/route.png' id='route' name='route' alt='route'></a>
+                db!2m2!1d2.1685425!2d41.3865368' target=_blank><input type='image' src=" . $mapPath ." id='route' name='route' alt='route'></a>
             </div>
         </nav>
         ";
