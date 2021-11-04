@@ -3,7 +3,6 @@ require_once ('LoginController.php');
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <head>
     <title>Inlogpagina</title>
@@ -32,10 +31,8 @@ session_start();
         </table>
     </form>
 </body>
+
 <?php
-
-
-
 if (isset($_POST['login']))
 {
     try
