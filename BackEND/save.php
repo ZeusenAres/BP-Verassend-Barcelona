@@ -30,5 +30,9 @@ try {
             } catch (Exception $ex) { $error = $ex->getMessage(); }
         }
 
+<<<<<<< HEAD
 echo is_null($error) ? "Bedankt voor de reservering,<br> U krijgt zo spoedig mogelijk een bevestiging via de mail.<br>" : $error;
+=======
+echo is_null($error) ? "Bedankt voor de reservering" : $error;
+>>>>>>> 9a37a56dc4cd22eaf97de9bec4b849f06617b05a
 ?>
