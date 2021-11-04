@@ -22,7 +22,7 @@
             <div class="tab">
                 <h2>No.1 Barcelona Fietsstour</h2>
                 <p>
-                    * Ontdek op een ‘actieve’ manier het Idyllische Barcalona. <br />
+                    * Ontdek op een ï¿½actieveï¿½ manier het Idyllische Barcalona. <br />
                     * Inclusief fietshuur, helm, water en koffie. (Inbegrepen bij de prijs)<br />
                     * Beoordeeld met 5 sterren op Tripadvisor & ANWB.<br />
                     * Duur:  2.5 uur(Andere tijdstippen en duur mogelijk in overleg).<br />
@@ -33,7 +33,7 @@
                     * Gesproken talen: Nederlands<br />
                     * Altijd gratis annuleren 24 uur voor de tour (100% restitutie)<br />
                     * (Prijs is per persoon, Inclusief fiets)<br />
-                    <p>€10,-</p>
+                    <p>ï¿½10,-</p>
                 </p>
             </div>
 
@@ -42,31 +42,15 @@
             <div class="tab">
                 <h2>Prijs losse fietsen</h2>
                 <p>
-                    <ul>test</ul>
-                    <ul>test</ul>
-                    <ul>test</ul>
-                    <ul>test</ul><br />
-                    <p>??</p>
+                    <ul>*Naast de fietsen voor de tour bieden wij ook losse fietsen aan.<br> Momenteel hebben wij maar 1 type fiets.</ul>
+                    <ul></ul>
+                    <ul>* Type 1 fiets   20 euro.</ul>
+                    <br />
+                    <p>Alle prijzen zijn inclusief btw</p>
                 </p>
             </div>
 
-            <input type="radio" id="tabgold" name="mytabs" />
-            <label for="tabgold">??</label>
-            <div class="tab">
-                <h2>fiets</h2>
-                <p>
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <ul>??</ul><br />
-                    <p>test</p>
-                </p>
-            </div>
+            
         </div>
     </div>
 
