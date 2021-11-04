@@ -15,7 +15,7 @@ session_start();
 <div class="mordor">
     <div class="container">
         <section id="content">
-            <form action="index.php" method="post">
+            <form action="inlog.php" method="post">
                 <h1>Inloggen voor medewerkers!</h1>
                 <div class="Gebruikersnaam">
                     <input type="text" placeholder="Gebruikersnaam" required="" id="Gebruikersnaam" />

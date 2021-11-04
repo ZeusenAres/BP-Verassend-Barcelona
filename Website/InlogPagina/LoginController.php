@@ -5,7 +5,7 @@ class LoginController
     //....
 
 
-public function __construct()
+public function __construct() // database connectie
 {
     $host = '127.0.0.1';
     $database = 'login';
@@ -18,6 +18,7 @@ public function __construct()
 
            
 }
+// Hier wordt de user en password gevalideert
 public function Login(string $user, $password) : bool
 {
     $this->ValidateUser($user);
@@ -39,7 +40,7 @@ private function ValidatePassword(string $password)
         throw new Exception('Geef een wachtwoord op');
     }
 }
-
+// hier wordt er gekeken of er een match is tussen de ingevoerde ww en database
 private function CheckPassword(string $user, string $password) : bool
 {
     $statement = $this->connection->Prepare
