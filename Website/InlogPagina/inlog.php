@@ -3,36 +3,39 @@ require_once ('LoginController.php');
 session_start();
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Log in pagina</title>
-    <link rel="stylesheet" type="text/css" href="Inlog.css" />
-    <link rel="stylesheet" type="text/css" href="../header-footer/header.footer.css" />
+    <title>Inlogpagina</title>
 </head>
 <body>
-<div class="mordor">
-    <div class="container">
-        <section id="content">
-            <form action="inlog.php" method="post">
-                <img src="../IMG/Verassend_Barcelona_LOGO_BG.png" width="150" height="150"/>
-                <h1>Inloggen voor medewerkers!</h1>
-                <div class="Gebruikersnaam">
-                    <input type="text" placeholder="Gebruikersnaam" required="" id="Gebruikersnaam" naam="user" />
-                </div>
-                <div class="Wachtwoord">
-                    <input type="password" placeholder="Wachtwoord" required="" id="Wachtwoord" name="password"/>
-                </div>
-                <div class="Button">
-                    <input type="submit" value="Log in" id="Button" name="login" />
-                </div>
-            </form>
-        </section>
-    </div>
-</div>
+    <form action="index.php" method="post">
+        <table>
+            <tr>
+                <td>Gebruiker</td>
+                <td>
+                    <input type="text" name="user" />
+                </td>
+            </tr>
+            <tr>
+                <td>Wachtwoord</td>
+                <td>
+                    <input type="password" name="password" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="login" value="Login" />
+                    <a href="NewUser.php">Nieuwe gebruiker</a>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 <?php
+
+
+
 if (isset($_POST['login']))
 {
     try
@@ -56,6 +59,9 @@ if (isset($_POST['login']))
         echo $ex->getMessage() . "<br/>";
     }
 }
-?> 
 
+
+
+
+?> 
 </html>
