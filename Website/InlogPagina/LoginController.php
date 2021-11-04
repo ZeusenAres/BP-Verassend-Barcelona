@@ -18,6 +18,7 @@ public function __construct() // database connectie
 
            
 }
+
 // Hier wordt de user en password gevalideert
 public function Login(string $user, $password) : bool
 {
@@ -25,6 +26,7 @@ public function Login(string $user, $password) : bool
     $this->ValidatePassword($password);
     return $this->CheckPassword($user, $password);
 }
+
 private function ValidateUser(string $user)
 {
     if (strlen(trim($user)) == 0)
@@ -40,6 +42,7 @@ private function ValidatePassword(string $password)
         throw new Exception('Geef een wachtwoord op');
     }
 }
+
 // hier wordt er gekeken of er een match is tussen de ingevoerde ww en database
 private function CheckPassword(string $user, string $password) : bool
 {

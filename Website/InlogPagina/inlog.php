@@ -19,13 +19,13 @@ session_start();
                 <img src="../IMG/Verassend_Barcelona_LOGO_BG.png" width="150" height="150"/>
                 <h1>Inloggen voor medewerkers!</h1>
                 <div class="Gebruikersnaam">
-                    <input type="text" placeholder="Gebruikersnaam" required="required" id="Gebruikersnaam"/>
+                    <input type="text" placeholder="Gebruikersnaam" required="" id="Gebruikersnaam" naam="user" />
                 </div>
                 <div class="Wachtwoord">
-                    <input type="password" placeholder="Wachtwoord" required="required" id="Wachtwoord"/>
+                    <input type="password" placeholder="Wachtwoord" required="" id="Wachtwoord" name="password"/>
                 </div>
                 <div class="Button">
-                    <input type="submit" value="Log in" id="Button"/>
+                    <input type="submit" value="Log in" id="Button" name="login" />
                 </div>
             </form>
         </section>
