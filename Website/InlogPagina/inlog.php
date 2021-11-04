@@ -1,3 +1,8 @@
+<?php
+require_once ('LoginController.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +15,7 @@
 <div class="mordor">
     <div class="container">
         <section id="content">
-            <form action="">
+            <form action="index.php" method="post">
                 <h1>Inloggen voor medewerkers!</h1>
                 <div class="Gebruikersnaam">
                     <input type="text" placeholder="Gebruikersnaam" required="" id="Gebruikersnaam" />
@@ -26,4 +31,30 @@
     </div>
 </div>
 </body>
+<?php
+if (isset($_POST['login']))
+{
+    try
+    {
+        $user = $_POST['user'];
+        $loginController = new LoginController();
+        if ($loginController->Login($user, $_POST['password']))
+        {
+            echo 'ingelogd<br/>';
+            $_SESSION['user'] = $user;
+        }
+        else
+        {
+            echo 'ongeldig user id of wachtwoord<br/>';
+            unset( $_SESSION['user']);
+        }
+    }
+
+    catch (Exception $ex)
+    {
+        echo $ex->getMessage() . "<br/>";
+    }
+}
+?> 
+
 </html>
