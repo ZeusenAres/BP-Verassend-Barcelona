@@ -10,12 +10,11 @@
     flex-wrap: wrap;
 }
 
-.containerA, .containerB
-{
+.containerA, .containerB {
     display: flex;
     text-align: center;
     flex-direction: column;
-    background-color: red;
+    background-color: #FCD739;
     margin-top: 150px;
     width: 500px;
     height: 650px;

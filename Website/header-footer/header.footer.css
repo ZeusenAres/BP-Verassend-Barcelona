@@ -1,10 +1,5 @@
 ﻿body {
-    background-color: #662C25;
-    opacity: 1;
-    background: linear-gradient(135deg, #FCD73955 25%, transparent 25%) -40px 0/ 80px 80px,
-        linear-gradient(225deg, #FCD739 25%, transparent 25%) -40px 0/ 80px 80px,
-        linear-gradient(315deg, #FCD73955 25%, transparent 25%) 0px 0/ 80px 80px,
-        linear-gradient(45deg, #FCD739 25%, #662C25 25%) 0px 0/ 80px 80px;
+    background: #f0dba5;
 }
 
 .headcapsule {
