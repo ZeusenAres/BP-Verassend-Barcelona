@@ -16,6 +16,7 @@ session_start();
     <div class="container">
         <section id="content">
             <form action="inlog.php" method="post">
+                <img src="../IMG/Verassend_Barcelona_LOGO_BG.png" width="150" height="150"/>
                 <h1>Inloggen voor medewerkers!</h1>
                 <div class="Gebruikersnaam">
                     <input type="text" placeholder="Gebruikersnaam" required="required" id="Gebruikersnaam"/>
