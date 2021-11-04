@@ -1,31 +1,37 @@
 <?php
 
 class LoginController
-{
-    //....
+{ 
 
 
-public function __construct() // database connectie
+
+public function __construct()
 {
+    
     $host = '127.0.0.1';
     $database = 'login';
     $user = 'root';
     $password = '';
+    
+    // $charset = "utf8mb4";
+
+    // $dsn = "mysql:host=$server;dbname=$database;charset";
 
     $this->connection = new PDO("mysql:host=$host;dbname=$database", $user, $password);
 
-
-
-           
 }
 
-// Hier wordt de user en password gevalideert
+
+
+
+// login functie
 public function Login(string $user, $password) : bool
 {
     $this->ValidateUser($user);
     $this->ValidatePassword($password);
     return $this->CheckPassword($user, $password);
 }
+
 
 private function ValidateUser(string $user)
 {
@@ -43,7 +49,7 @@ private function ValidatePassword(string $password)
     }
 }
 
-// hier wordt er gekeken of er een match is tussen de ingevoerde ww en database
+// password controller
 private function CheckPassword(string $user, string $password) : bool
 {
     $statement = $this->connection->Prepare
@@ -55,10 +61,48 @@ private function CheckPassword(string $user, string $password) : bool
     $result = $statement->fetch();
     return $result != null && password_verify($password,$result['password']);
 }
+           
+public function CreateUser(string $user, string $password,
+                           string $repeatedPassword,
+                            string $fullName, string $email)
+{
+    $this->ValidateUser($user);
+    $this->ValidatePassword($user);
+    $this->ValidateRepeatedPassword($password, $repeatedPassword);
+    $this->CheckIfUserExists($user);
 
+    $statement = $this->connection->Prepare(
+        "insert into $this->table (id, password, name, email) values (:id, :password, :name, :email)");
+    $statement->execute(
+        [":id" => trim($user),
+         ":password" => password_hash(trim($password), PASSWORD_DEFAULT),
+         ":name" => trim($fullName),
+         ":email" => trim($email)
+         ]);
+} 
 
+private function ValidateRepeatedPassword(string $password, 
+                                          string $repeatedPassword)
+{
+    if (trim($password) != trim($repeatedPassword))
+    {
+        throw new Exception('Wachtwoorden moeten hetzelfde zijn');
+    }
+}
 
+private function CheckIfUserExists(string $user)
+{
+    $statement = 
+      $this->connection->Prepare("select 1 from $this->table where id = :id");
+    $statement->execute([":id" => $user]);
+    if ($statement->fetch() == 1)
+    {
+        throw new Exception("User $user bestaat al!");
+    }
+}
 
 private PDO $connection;
 private string $table ="info";
+
+
 }
