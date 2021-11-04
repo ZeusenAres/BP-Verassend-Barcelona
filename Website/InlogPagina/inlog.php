@@ -9,11 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../header-footer/header.footer.css">
     <link rel="stylesheet" href="inlog.css">
-    <title>www.verassendbarcelona.nl</title>
-    <?php
-    require_once '../Classes/PageLayout.php';
-    $layout = new PageLayout();
-    ?>
+    <title>www.verassendbarcelona.nl/login</title>
 </head>
 <body>
     <form action="index.php" method="post">
@@ -32,7 +28,7 @@ session_start();
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" name="login" value="Login" />
+                    <input class="submit" type="submit" name="login" value="Login"/><br>
                     <a href="NewUser.php">Nieuwe gebruiker</a>
                 </td>
             </tr>

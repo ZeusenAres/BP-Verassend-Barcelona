@@ -5,7 +5,11 @@
 
 
 <head>
-    <title>Nieuwe gebruiker maken</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../header-footer/header.footer.css" />
+    <link rel="stylesheet" href="inlog.css" />
+    <title>www.verassendbarcelona.nl/aanmelden</title>
 </head>
 <body>
     <form action="NewUser.php" method="post">
@@ -42,7 +46,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" name="newUser" value="Opslaan" />
+                    <input class="submit" type="submit" name="newUser" value="Opslaan" />
                 </td>
             </tr>
         </table>
