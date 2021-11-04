@@ -11,7 +11,6 @@ class PageLayout
                 <div class='headcapsule'>
                     <img class='logoimg' src=$this->imagePathA alt='[LOGO]'>
                     <h1 class='headertitle'>Wij nemen je mee op een avontuur!</h1>
-                    <div>[Profile]</div>
                     <div class='dropdown'>
                         <button class='dropbtn'>Menu</button>
                         <div class='dropdown-content'>
