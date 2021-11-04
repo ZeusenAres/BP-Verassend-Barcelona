@@ -60,5 +60,5 @@ private function CheckPassword(string $user, string $password) : bool
 
 
 private PDO $connection;
-private string $table ="login";
+private string $table ="info";
 }
