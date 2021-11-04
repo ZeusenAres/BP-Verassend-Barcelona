@@ -44,7 +44,7 @@ if (isset($_POST['login']))
         $loginController = new LoginController();
         if ($loginController->Login($user, $_POST['password']))
         {
-            echo 'ingelogd<br/>';
+            echo 'ingelogd<br/>' . header("Location:index.php");
             $_SESSION['user'] = $user;
         }
         else
@@ -58,6 +58,7 @@ if (isset($_POST['login']))
     {
         echo $ex->getMessage() . "<br/>";
     }
+    
 }
 
 
