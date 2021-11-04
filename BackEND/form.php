@@ -22,8 +22,8 @@
       <input type="text" name="Achternaam" required/>
       <label for="quantity">Aantal fietsen</label>
       <input type="number" id="quantity" name="fietsen" min="1" max="20">
-      <label for="date">Datum en tijd:</label>
-      <input type="datetime-local" id="date" name="datum">
+      <label for="date">Datum :</label>
+      <input type="date" id="date" name="datum" min="2021-11-5">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email">
       <input type="submit" value="Verzenden"/>
