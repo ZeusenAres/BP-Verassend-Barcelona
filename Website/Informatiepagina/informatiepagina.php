@@ -11,25 +11,9 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="headcapsule">
-            <img class="logoimg" src="../IMG/Verassend_Barcelona_LOGO.png" alt="[LOGO]">
-            <h1 class="headertitle">Wij nemen je mee op een avontuur!</h1>
-
-
-            <div class="dropdown">
-                <button class="dropbtn">Menu</button>
-                <div class="dropdown-content">
-                    <a href="../Homepage/homepage.php">Home</a>
-                    <a href="../../BackEND/form.php">Reserveren</a>
-                    <a href="informatiepagina.php">Informatie</a>
-                    <a href="../TarievenPagina/tarievenpagina.php">Prijzen</a>
-                </div>
-            </div>
-        </div>
-
-    </nav>
+    <?php
+    $layout->getNavbarHead("../Homepage/", "../../BackEnd/", "", "../Tarievenpagina/", "../InlogPagina/");
+    ?>
     
     <br>
     <div class="fietsverhuur">
